@@ -1,0 +1,705 @@
+{
+    "nb_rows": 46,
+    "nb_columns": 26,
+    "nb_cells": 1196,
+    "accuracy": {
+        "code": 100.0,
+        "quart_pop_dt": 100.0,
+        "quart_pop_pop": 100.0,
+        "quart_pop_hom": 100.0,
+        "quart_pop_fem": 100.0,
+        "quart_pop_enf": 100.0,
+        "quart_pop_m": 100.0,
+        "quart_pop_f": 100.0,
+        "quart_pop_chef": 100.0,
+        "quart_pop_men": 100.0,
+        "quart_pop_comu": 100.0,
+        "quart_pop_iso": 100.0,
+        "quart_ins": 100.0,
+        "quart_cont_calc": 100.0,
+        "densite": 100.0,
+        "quart_coul": 100.0,
+        "iweps_code": 100.0,
+        "iweps_diff": 100.0,
+        "geo_point_2d": 100.0,
+        "geo_shape": 100.0
+    },
+    "nb_incomplete_cells": 0,
+    "percentage_complete_cells": 100.0,
+    "nb_incomplete_rows": 0,
+    "percentage_complete_rows": 100.0,
+    "percentage_comprehensible_columns": 100.0,
+    "percentage_accurate_cells": 100.0,
+    "nbcol_accuracy": 20,
+    "cols_types": "quart_nom#string#1.0#**quart_code#string#1.0#**code#phone#1.0#1.0**iweps_quart#string#1.0#**quart_def#string#1.0#**quart_typologie#string#1.0#**typo_quartier_3#string#1.0#**quart_pop_dt#date#1.0#1.0**quart_pop_pop#int#1.0#1.0**quart_pop_hom#int#1.0#1.0**quart_pop_fem#int#1.0#1.0**quart_pop_enf#int#1.0#1.0**quart_pop_m#int#1.0#1.0**quart_pop_f#int#1.0#1.0**quart_pop_chef#int#1.0#1.0**quart_pop_men#int#1.0#1.0**quart_pop_comu#int#1.0#1.0**quart_pop_iso#int#1.0#1.0**quart_ins#int#1.0#1.0**quart_cont_calc#float#1.0#1.0**densite#int#1.0#1.0**quart_coul#int#1.0#1.0**iweps_code#phone#1.0#1.0**iweps_diff#int#1.0#1.0**geo_point_2d#latlon_wgs#1.5#1.0**geo_shape#geoshape#1.5#1.0**",
+    "return_dict": {
+        "encoding": "UTF-8",
+        "separator": ";",
+        "header_row_idx": 0,
+        "header": [
+            "quart_nom",
+            "quart_code",
+            "code",
+            "iweps_quart",
+            "quart_def",
+            "quart_typologie",
+            "typo_quartier_3",
+            "quart_pop_dt",
+            "quart_pop_pop",
+            "quart_pop_hom",
+            "quart_pop_fem",
+            "quart_pop_enf",
+            "quart_pop_m",
+            "quart_pop_f",
+            "quart_pop_chef",
+            "quart_pop_men",
+            "quart_pop_comu",
+            "quart_pop_iso",
+            "quart_ins",
+            "quart_cont_calc",
+            "densite",
+            "quart_coul",
+            "iweps_code",
+            "iweps_diff",
+            "geo_point_2d",
+            "geo_shape"
+        ],
+        "total_lines": 46,
+        "heading_columns": 0,
+        "trailing_columns": 0,
+        "continuous": [
+            "quart_cont_calc"
+        ],
+        "categorical": [
+            "quart_pop_dt",
+            "iweps_diff"
+        ],
+        "columns_fields": {
+            "quart_nom": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_code": [
+                {
+                    "python_type": "string",
+                    "format": "iso_country_code",
+                    "score": 0.2222222222222222
+                }
+            ],
+            "code": [
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "iweps_quart": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_def": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_typologie": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "typo_quartier_3": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_dt": [
+                {
+                    "python_type": "string",
+                    "format": "date",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_pop": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.044444444444444446
+                }
+            ],
+            "quart_pop_hom": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_fem": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.044444444444444446
+                }
+            ],
+            "quart_pop_enf": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_m": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.022222222222222223
+                }
+            ],
+            "quart_pop_f": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_chef": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.022222222222222223
+                }
+            ],
+            "quart_pop_men": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_comu": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_iso": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_ins": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_cont_calc": [
+                {
+                    "python_type": "float",
+                    "format": "float",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "float",
+                    "format": "longitude_wgs",
+                    "score": 0.28888888888888886
+                },
+                {
+                    "python_type": "float",
+                    "format": "latitude_wgs",
+                    "score": 0.13333333333333333
+                }
+            ],
+            "densite": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.022222222222222223
+                }
+            ],
+            "quart_coul": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.7333333333333333
+                }
+            ],
+            "iweps_code": [
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "iweps_diff": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.0
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.0
+                }
+            ]
+        },
+        "columns_labels": {
+            "quart_nom": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_code": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "code": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "iweps_quart": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_def": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_typologie": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "typo_quartier_3": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_dt": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_pop": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_hom": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_fem": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_enf": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_m": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_f": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_chef": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_men": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_comu": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_iso": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_ins": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_cont_calc": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "densite": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_coul": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "iweps_code": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "iweps_diff": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.0
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 0.5
+                }
+            ]
+        },
+        "columns": {
+            "quart_nom": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_code": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "code": [
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "iweps_quart": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_def": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_typologie": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "typo_quartier_3": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_dt": [
+                {
+                    "python_type": "string",
+                    "format": "date",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_pop": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_hom": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_fem": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_enf": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_m": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_f": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_chef": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_men": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_comu": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_pop_iso": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_ins": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_cont_calc": [
+                {
+                    "python_type": "float",
+                    "format": "float",
+                    "score": 1.0
+                }
+            ],
+            "densite": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "quart_coul": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "year",
+                    "score": 0.7333333333333333
+                }
+            ],
+            "iweps_code": [
+                {
+                    "python_type": "string",
+                    "format": "phone",
+                    "score": 1.0
+                }
+            ],
+            "iweps_diff": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.5
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.5
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.5
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,597 @@
+{
+    "portals": [
+        {
+            "id": 1,
+            "sequence": 1,
+            "name": "Data OpenDataSoft",
+            "more_details": {
+                "link": "https://data.opendatasoft.com/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 2,
+            "sequence": 2,
+            "name": "Namur Portal",
+            "more_details": {
+                "link": "https://data.namur.be/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 5,
+            "sequence": 3,
+            "name": "Liege Portal",
+            "more_details": {
+                "link": "https://opendata.liege.be/"
+            },
+            "system": 2,
+            "system_name": "ckan",
+            "system_more_details": {
+                "check": "api/3",
+                "suffix": "api/3/action/",
+                "export_dt": "",
+                "search_dt": "package_search?q=#dt_id#&start=#start#&rows=#rows#",
+                "explore_dt": "dataset/#pack_id#/resource/#res_id#/"
+            }
+        },
+        {
+            "id": 4,
+            "sequence": 4,
+            "name": "BEP",
+            "more_details": {
+                "link": "https://data.bep.be/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 3,
+            "sequence": 5,
+            "name": "Public OpenDataSoft",
+            "more_details": {
+                "link": "https://public.opendatasoft.com/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        }
+    ],
+    "dataset_link": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur/exports/csv?limit=-1",
+    "select_format": "csv",
+    "dataset": {
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur"
+            },
+            {
+                "rel": "datasets",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets"
+            },
+            {
+                "rel": "records",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur/records"
+            },
+            {
+                "rel": "exports",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur/exports"
+            },
+            {
+                "rel": "facets",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur/facets"
+            },
+            {
+                "rel": "reuses",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/namur-limites-de-46-quartiers@namur/reuses"
+            }
+        ],
+        "dataset": {
+            "dataset_id": "namur-limites-de-46-quartiers@namur",
+            "dataset_uid": "da_lzvscn@namur",
+            "has_records": true,
+            "features": [
+                "analyze",
+                "timeserie",
+                "geo",
+                "custom_view"
+            ],
+            "visibility": "domain",
+            "attachments": [],
+            "data_visible": true,
+            "fields": [
+                {
+                    "name": "quart_nom",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Quartier statistique",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "quart_code",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Code Quartier",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "code",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "facetsort": "-count"
+                    },
+                    "label": "Code ins Entit\u00e9",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "iweps_quart",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Nom Quartier IWEPS",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "quart_def",
+                    "description": null,
+                    "annotations": {},
+                    "label": "D\u00e9finition",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "quart_typologie",
+                    "description": "5 zones",
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Typologie du quartier",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "typo_quartier_3",
+                    "description": "3 zones",
+                    "annotations": {
+                        "sortable": true
+                    },
+                    "label": "Typologie Quartier (3)",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_dt",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count",
+                        "timeserie_precision": "day"
+                    },
+                    "label": "Date donn\u00e9es Population",
+                    "type": "date",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_pop",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Habitants",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_hom",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Hommes",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_fem",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Femmes",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_enf",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Enfants",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_m",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Masculin",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_f",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre F\u00e9minin",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_chef",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre chefs m\u00e9nage",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_men",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre M\u00e9nages",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_comu",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre en communaut\u00e9",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_pop_iso",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre isol\u00e9s",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_ins",
+                    "description": null,
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Nombre Secteurs INS",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_cont_calc",
+                    "description": null,
+                    "annotations": {
+                        "sortable": true,
+                        "facetsort": "-count",
+                        "unit": "ha"
+                    },
+                    "label": "Superficie",
+                    "type": "double",
+                    "checked": true
+                },
+                {
+                    "name": "densite",
+                    "description": "Hab/km\u00b2",
+                    "annotations": {
+                        "facetsort": "-count"
+                    },
+                    "label": "Densit\u00e9 de population",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "quart_coul",
+                    "description": null,
+                    "annotations": {},
+                    "label": "Couleur",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "iweps_code",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Code Quartier IWEPS",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "iweps_diff",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "disjunctive": true,
+                        "sortable": true
+                    },
+                    "label": "Diff\u00e9rence de d\u00e9nomination avec IWEPS",
+                    "type": "text",
+                    "checked": true
+                },
+                {
+                    "name": "geo_point_2d",
+                    "description": null,
+                    "annotations": {},
+                    "label": "Geo Point",
+                    "type": "geo_point_2d",
+                    "checked": true
+                },
+                {
+                    "name": "geo_shape",
+                    "description": null,
+                    "annotations": {},
+                    "label": "Geo Shape",
+                    "type": "geo_shape",
+                    "checked": true
+                }
+            ],
+            "metas": {
+                "dcat": {
+                    "created": null,
+                    "issued": null,
+                    "creator": "Ville de Namur - G\u00e9omatique",
+                    "contributor": "Ville de Namur",
+                    "contact_name": "Service G\u00e9omatique",
+                    "contact_email": "geomatique@ville.namur.be",
+                    "accrualperiodicity": null,
+                    "spatial": null,
+                    "temporal": null,
+                    "granularity": null,
+                    "dataquality": null,
+                    "publisher_type": null,
+                    "conforms_to": null,
+                    "temporal_coverage_start": null,
+                    "temporal_coverage_end": null
+                },
+                "inspire": {
+                    "theme": [
+                        "Unit\u00e9s administratives"
+                    ],
+                    "type": [
+                        "S\u00e9rie de donn\u00e9es g\u00e9ographiques"
+                    ],
+                    "file_identifier": null,
+                    "hierarchy_level": null,
+                    "hierarchy_level_name": null,
+                    "spatial_resolution": null,
+                    "topologic_consistency": null,
+                    "contact_individual_name": "Ville de Namur - Service g\u00e9omatique",
+                    "contact_position": null,
+                    "contact_address": "H\u00f4tel de Ville - 5000 Namur",
+                    "contact_email": "geomatique@ville.namur.be",
+                    "identification_purpose": null,
+                    "extend_description": null,
+                    "extend_bounding_box_westbound_longitude": null,
+                    "extend_bounding_box_eastbound_longitude": null,
+                    "extend_bounding_box_southbound_latitude": null,
+                    "extend_bounding_box_northbound_latitude": null
+                },
+                "default": {
+                    "title": "Namur - Limites de 46 quartiers",
+                    "description": "<p>D\u00e9coupage en 46 quartiers du territoire de Namur. Les limites de ce jeu de donn\u00e9es sont la base utilis\u00e9e dans l'\u00e9laboration du \"Portail statistiques des 46 quartiers de Namur\". L'Onglet <a href=\"https://data.namur.be/pages/statistiquesaccueil\">STATISTIQUES</a> de l\u2019OPENDATA de la commune de Namur pr\u00e9sente un \u00e9ventail unique de donn\u00e9es d\u00e9mographiques sur les 46 quartiers et ce, de fa\u00e7on strictement comparable depuis 1985. Pour consulter <a href=\"https://data.namur.be/pages/statistiques-decoupagequartiers/content/\">l'historique du d\u00e9coupage en 46 quartiers</a>.</p>",
+                    "theme": [
+                        "Population, Statistiques"
+                    ],
+                    "keyword": [
+                        "Namur",
+                        "Quartier",
+                        "Statistique",
+                        "Chiffres",
+                        "StatExport",
+                        "D\u00e9coupage",
+                        "INS"
+                    ],
+                    "license": "CC BY",
+                    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                    "language": "fr",
+                    "metadata_languages": [
+                        "fr"
+                    ],
+                    "timezone": null,
+                    "modified": "2023-02-22T22:15:05+00:00",
+                    "modified_updates_on_metadata_change": false,
+                    "modified_updates_on_data_change": true,
+                    "data_processed": "2023-02-22T22:15:05+00:00",
+                    "metadata_processed": "2023-02-22T22:15:05.427000+00:00",
+                    "geographic_reference": [
+                        "be_80_92094"
+                    ],
+                    "geographic_reference_auto": true,
+                    "territory": [
+                        "Namur"
+                    ],
+                    "geometry_types": [
+                        "Polygon"
+                    ],
+                    "publisher": "Ville de Namur",
+                    "references": "https://data.namur.be/pages/statistiquesaccueil/",
+                    "records_count": 46,
+                    "attributions": null,
+                    "source_domain": null,
+                    "source_domain_title": null,
+                    "source_domain_address": null,
+                    "source_dataset": "Population/Quartiers.json",
+                    "shared_catalog": null,
+                    "federated": false,
+                    "oauth_scope": null,
+                    "parent_domain": null
+                },
+                "custom": {
+                    "cycle": [
+                        "Finalis\u00e9"
+                    ],
+                    "periodicity": [
+                        "Quotidienne"
+                    ]
+                }
+            }
+        }
+    },
+    "dataset_id": "namur-limites-de-46-quartiers@namur",
+    "portal": {
+        "id": 1,
+        "sequence": 1,
+        "name": "Data OpenDataSoft",
+        "more_details": {
+            "link": "https://data.opendatasoft.com/"
+        },
+        "system": 1,
+        "system_name": "ods",
+        "system_more_details": {
+            "check": "api/v2",
+            "suffix": "api/v2/catalog/",
+            "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+            "search_dt": "datasets?where='#dt_id#'",
+            "explore_dt": "datasets/#dt_id#/"
+        }
+    },
+    "quality": {
+        "md1_1": 75.7201646090535,
+        "md2_1": 100,
+        "md2_2": 100,
+        "md2_3": 100,
+        "md2_4": 100,
+        "md2_5": 0,
+        "md2_6": 100,
+        "md3_1": 100,
+        "md3_2": 100,
+        "md3_3": 100,
+        "md4_1": 100.0,
+        "md4_2": 100.0,
+        "md4_3": 100.0,
+        "md4_4": 26.66666666666667,
+        "md5_1": 100,
+        "md6_1": 100,
+        "md6_2": 100,
+        "md6_3": 0,
+        "md6_4": 0,
+        "md7_1": 100,
+        "md7_2": 0,
+        "md7_3": 100,
+        "md8_1": 100,
+        "md8_2": 0,
+        "md10_1": 100,
+        "md10_2": 100,
+        "md11_1": 100,
+        "md11_2": 100,
+        "md11_3": 100,
+        "md9_1": 11.538461538461538,
+        "md9_2": 0.0,
+        "dt1_1": 100.0,
+        "dt1_2": 100.0,
+        "dt2_1": 100.0,
+        "dt3_1": 100.0,
+        "info_dt2_1": {
+            "code": 100.0,
+            "quart_pop_dt": 100.0,
+            "quart_pop_pop": 100.0,
+            "quart_pop_hom": 100.0,
+            "quart_pop_fem": 100.0,
+            "quart_pop_enf": 100.0,
+            "quart_pop_m": 100.0,
+            "quart_pop_f": 100.0,
+            "quart_pop_chef": 100.0,
+            "quart_pop_men": 100.0,
+            "quart_pop_comu": 100.0,
+            "quart_pop_iso": 100.0,
+            "quart_ins": 100.0,
+            "quart_cont_calc": 100.0,
+            "densite": 100.0,
+            "quart_coul": 100.0,
+            "iweps_code": 100.0,
+            "iweps_diff": 100.0,
+            "geo_point_2d": 100.0,
+            "geo_shape": 100.0
+        },
+        "metadata": 73.9232783677228,
+        "data": 100.0,
+        "overall": 79.51114728892506,
+        "md1": 75.7201646090535,
+        "md2": 83.33333333333333,
+        "md3": 100.0,
+        "md4": 81.66666666666667,
+        "md5": 100.0,
+        "md6": 50.0,
+        "md7": 66.66666666666667,
+        "md8": 50.0,
+        "md9": 5.769230769230769,
+        "md10": 100.0,
+        "md11": 100.0,
+        "dt1": 100.0,
+        "dt2": 100.0,
+        "dt3": 100.0
+    }
+}

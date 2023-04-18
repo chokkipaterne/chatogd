@@ -1,0 +1,29 @@
+@media (min-width: 992px) {
+  .nav-wrapper {
+    padding: 0 20px;
+  }
+  .spacer {
+    height: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .spacer {
+    height: 55px;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+nav ul a.active {
+  background: #3949ab;
+  color: white;
+  font-weight: bold;
+}
+nav {
+  z-index: 4 !important;
+}

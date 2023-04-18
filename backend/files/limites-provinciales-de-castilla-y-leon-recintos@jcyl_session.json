@@ -1,0 +1,297 @@
+{
+    "portals": [
+        {
+            "id": 1,
+            "sequence": 1,
+            "name": "Data OpenDataSoft",
+            "more_details": {
+                "link": "https://data.opendatasoft.com/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 2,
+            "sequence": 2,
+            "name": "Namur Portal",
+            "more_details": {
+                "link": "https://data.namur.be/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 3,
+            "sequence": 3,
+            "name": "Public OpenDataSoft",
+            "more_details": {
+                "link": "https://public.opendatasoft.com/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 4,
+            "sequence": 4,
+            "name": "BEP",
+            "more_details": {
+                "link": "https://data.bep.be/"
+            },
+            "system": 1,
+            "system_name": "ods",
+            "system_more_details": {
+                "check": "api/v2",
+                "suffix": "api/v2/catalog/",
+                "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+                "search_dt": "datasets?where='#dt_id#'",
+                "explore_dt": "datasets/#dt_id#/"
+            }
+        },
+        {
+            "id": 5,
+            "sequence": 5,
+            "name": "Singapore Portal",
+            "more_details": {
+                "link": "https://data.gov.sg/"
+            },
+            "system": 2,
+            "system_name": "ckan",
+            "system_more_details": {
+                "check": "api/3",
+                "suffix": "api/3/action/",
+                "export_dt": "",
+                "search_dt": "package_search?q=#dt_id#&start=#start#&rows=#rows#",
+                "explore_dt": "dataset/#pack_id#/resource/#res_id#/"
+            }
+        }
+    ],
+    "dataset_link": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/exports/csv?limit=-1",
+    "select_format": "csv",
+    "dataset": {
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl"
+            },
+            {
+                "rel": "datasets",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets"
+            },
+            {
+                "rel": "records",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/records"
+            },
+            {
+                "rel": "exports",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/exports"
+            },
+            {
+                "rel": "facets",
+                "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/facets"
+            }
+        ],
+        "dataset": {
+            "dataset_id": "limites-provinciales-de-castilla-y-leon-recintos@jcyl",
+            "dataset_uid": "da_skdnbe@jcyl",
+            "has_records": true,
+            "features": [
+                "geo",
+                "analyze"
+            ],
+            "visibility": "domain",
+            "attachments": [],
+            "data_visible": true,
+            "fields": [
+                {
+                    "name": "geo_point_2d",
+                    "description": null,
+                    "annotations": {},
+                    "label": "Geo Point",
+                    "type": "geo_point_2d",
+                    "checked": true
+                },
+                {
+                    "name": "geo_shape",
+                    "description": null,
+                    "annotations": {},
+                    "label": "Geo Shape",
+                    "type": "geo_shape",
+                    "checked": true
+                },
+                {
+                    "name": "cod_ine_prov",
+                    "description": null,
+                    "annotations": {
+                        "facet": true,
+                        "facetsort": "-count"
+                    },
+                    "label": "Cod_ine_prov",
+                    "type": "int",
+                    "checked": true
+                },
+                {
+                    "name": "provincia",
+                    "description": null,
+                    "annotations": {
+                        "facet": true
+                    },
+                    "label": "PROVINCIA",
+                    "type": "text",
+                    "checked": true
+                }
+            ],
+            "metas": {
+                "default": {
+                    "title": "L\u00edmites provinciales de Castilla y Le\u00f3n: recintos",
+                    "description": "<p><span style=\"font-size: 12.495px;\">Representaci\u00f3n cartogr\u00e1fica de las unidades administrativas provinciales oficiales de Castilla y Le\u00f3n.</span></p><p><span style=\"font-size: 12.495px;\">Delimitaci\u00f3n administrativa de las provincias de Castilla y Le\u00f3n generada a partir de las l\u00edneas-l\u00edmite municipales oficiales del Instituto Geogr\u00e1fico Nacional (IGN).</span></p><p><span style=\"font-size: 12.495px;\">Constituye una de las cartograf\u00edas b\u00e1sicas de referencia de la Comunidad Aut\u00f3noma de Castilla y Le\u00f3n.</span></p>",
+                    "theme": [
+                        "Medio ambiente"
+                    ],
+                    "keyword": [
+                        "Unidades administrativas",
+                        "l\u00edmites",
+                        "recintos",
+                        "provincias"
+                    ],
+                    "license": "CC BY 4.0 ES",
+                    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.es_ES",
+                    "language": "es",
+                    "metadata_languages": [
+                        "es"
+                    ],
+                    "timezone": "Europe/Madrid",
+                    "modified": "2022-04-18T11:18:34.836000+00:00",
+                    "modified_updates_on_metadata_change": true,
+                    "modified_updates_on_data_change": true,
+                    "data_processed": "2020-11-03T12:10:38.380000+00:00",
+                    "metadata_processed": "2022-04-18T11:18:48.660000+00:00",
+                    "geographic_reference": [
+                        "es_40_07"
+                    ],
+                    "geographic_reference_auto": true,
+                    "territory": [
+                        "Castilla y Le\u00f3n"
+                    ],
+                    "geometry_types": [
+                        "MultiPolygon",
+                        "Polygon"
+                    ],
+                    "publisher": "Junta de Castilla y Le\u00f3n",
+                    "references": null,
+                    "records_count": 9,
+                    "attributions": null,
+                    "source_domain": null,
+                    "source_domain_title": null,
+                    "source_domain_address": null,
+                    "source_dataset": null,
+                    "shared_catalog": null,
+                    "federated": false,
+                    "oauth_scope": null,
+                    "parent_domain": null
+                },
+                "custom": {
+                    "conjuntos-de-datos-relacionados": null
+                }
+            }
+        }
+    },
+    "dataset_id": "limites-provinciales-de-castilla-y-leon-recintos@jcyl",
+    "portal": {
+        "id": 1,
+        "sequence": 1,
+        "name": "Data OpenDataSoft",
+        "more_details": {
+            "link": "https://data.opendatasoft.com/"
+        },
+        "system": 1,
+        "system_name": "ods",
+        "system_more_details": {
+            "check": "api/v2",
+            "suffix": "api/v2/catalog/",
+            "export_dt": "datasets/#dt_id#/exports/#format#?limit=-1",
+            "search_dt": "datasets?where='#dt_id#'",
+            "explore_dt": "datasets/#dt_id#/"
+        }
+    },
+    "quality": {
+        "md1_1": 73.01587301587303,
+        "md2_1": 100,
+        "md2_2": 100,
+        "md2_3": 100,
+        "md2_4": 100,
+        "md2_5": 0,
+        "md2_6": 100,
+        "md3_1": 100,
+        "md3_2": 100,
+        "md3_3": 100,
+        "md4_1": 100.0,
+        "md4_2": 100.0,
+        "md4_3": 100,
+        "md4_4": 0,
+        "md5_1": 100,
+        "md6_1": 100,
+        "md6_2": 100,
+        "md6_3": 0,
+        "md6_4": 0,
+        "md7_1": 0,
+        "md7_2": 0,
+        "md7_3": 100,
+        "md8_1": 100,
+        "md8_2": 0,
+        "md10_1": 0,
+        "md10_2": 100,
+        "md11_1": 100,
+        "md11_2": 100,
+        "md11_3": 100,
+        "md9_1": 0.0,
+        "md9_2": 0.0,
+        "dt1_1": 100.0,
+        "dt1_2": 100.0,
+        "dt2_1": 0,
+        "dt3_1": 100.0,
+        "info_dt2_1": {
+            "geo_point_2d": 100.0,
+            "geo_shape": 100.0,
+            "cod_ine_prov": 100.0,
+            "provincia": -1
+        },
+        "metadata": 9.090909090909092,
+        "data": 33.333333333333336,
+        "overall": 14.285714285714286,
+        "md1": 73.01587301587303,
+        "md2": 83.33333333333333,
+        "md3": 100.0,
+        "md4": 75.0,
+        "md5": 100.0,
+        "md6": 50.0,
+        "md7": 33.333333333333336,
+        "md8": 50.0,
+        "md9": 0.0,
+        "md10": 50.0,
+        "md11": 100.0,
+        "dt1": 100.0,
+        "dt2": 0.0,
+        "dt3": 100.0
+    }
+}

@@ -1,0 +1,244 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif, Roboto, "Helvetica Neue", sans-serif;
+  background: #eeeeee;
+}
+.rounded {
+  border-radius: 50px;
+}
+.content {
+  min-height: 86vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.2em;
+}
+.mr-1 {
+  margin-right: 10px;
+}
+.mt-7 {
+  padding-top: 4%;
+}
+.mt-1 {
+  padding-top: 1.5%;
+}
+
+@media (min-width: 992px) {
+  .no-pad-left {
+    padding-left: 0px !important;
+  }
+  .no-pad-right {
+    padding-right: 0px !important;
+  }
+  .border-right {
+    border-right: 1px solid #eeeeee;
+  }
+}
+@media (max-width: 991px) {
+  .border-right {
+    margin-bottom: 50px;
+  }
+}
+.clear {
+  clear: both;
+}
+.h5-small {
+  font-size: 110%;
+}
+.btn {
+  padding: 0 2rem;
+}
+.pt-sm {
+  padding-top: 10px;
+}
+.pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.logo-img {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-app {
+  font-size: 1.5rem;
+}
+.pt4 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.heading-title {
+  font-weight: 500;
+  color: black;
+  margin-bottom: 0px;
+}
+.special-divider {
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 25px;
+}
+.divider-separator {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #4064d7;
+  width: 10%;
+  display: inline-block;
+}
+.special-image {
+  max-width: 80px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.sector {
+  text-transform: lowercase;
+  font-size: 70%;
+  margin-right: 5px;
+  border-radius: 30px;
+  margin-bottom: 5px;
+}
+.special-card-title {
+  font-size: 115% !important;
+}
+.see-all {
+  font-size: 130%;
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+.no-mt {
+  margin-top: 0px;
+}
+.no-mb {
+  margin-bottom: 0px !important;
+}
+.input-field.col label {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.gaugemeter {
+  position: relative !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  cursor: default !important;
+  display: inline-block !important;
+}
+
+.gaugemeter span,
+.gaugemeter b {
+  width: 54% !important;
+  position: absolute !important;
+  text-align: center !important;
+  display: inline-block !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-weight: 100 !important;
+  font-family: "Open Sans", Arial !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  margin: 0 23%;
+}
+
+.gaugemeter[data-style="Semi"] b {
+  width: 80% !important;
+  margin: 0 10% !important;
+}
+
+.gaugemeter s,
+.gaugemeter u {
+  text-decoration: none !important;
+  font-size: 0.6em !important;
+  font-weight: 200 !important;
+  opacity: 0.6 !important;
+}
+
+.gaugemeter b {
+  color: #000;
+  font-weight: 200;
+  opacity: 0.8;
+}
+.divcenter {
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+/*bar*/
+
+.bar {
+  background-color: #f2f2f1;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.bar-container h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #566366;
+  margin: 0 0 5px 0;
+}
+
+.bar-inner {
+  background-color: #2ecc71;
+  width: 0%;
+  height: 100%;
+  position: relative;
+  transition: width 3000ms linear;
+  cursor: pointer;
+}
+
+.bar-inner:after {
+  position: absolute;
+  right: 2.5%;
+  content: attr(data-percent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.notif {
+  color: blue;
+}
+
+#message-body a {
+  color: greenyellow !important;
+}

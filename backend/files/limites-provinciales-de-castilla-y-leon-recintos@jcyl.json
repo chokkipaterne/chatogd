@@ -1,0 +1,124 @@
+{
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl"
+        },
+        {
+            "rel": "datasets",
+            "href": "https://data.opendatasoft.com/api/v2/catalog/datasets"
+        },
+        {
+            "rel": "records",
+            "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/records"
+        },
+        {
+            "rel": "exports",
+            "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/exports"
+        },
+        {
+            "rel": "facets",
+            "href": "https://data.opendatasoft.com/api/v2/catalog/datasets/limites-provinciales-de-castilla-y-leon-recintos@jcyl/facets"
+        }
+    ],
+    "dataset": {
+        "dataset_id": "limites-provinciales-de-castilla-y-leon-recintos@jcyl",
+        "dataset_uid": "da_skdnbe@jcyl",
+        "has_records": true,
+        "features": [
+            "geo",
+            "analyze"
+        ],
+        "visibility": "domain",
+        "attachments": [],
+        "data_visible": true,
+        "fields": [
+            {
+                "name": "geo_point_2d",
+                "description": null,
+                "annotations": {},
+                "label": "Geo Point",
+                "type": "geo_point_2d"
+            },
+            {
+                "name": "geo_shape",
+                "description": null,
+                "annotations": {},
+                "label": "Geo Shape",
+                "type": "geo_shape"
+            },
+            {
+                "name": "cod_ine_prov",
+                "description": null,
+                "annotations": {
+                    "facet": true,
+                    "facetsort": "-count"
+                },
+                "label": "Cod_ine_prov",
+                "type": "int"
+            },
+            {
+                "name": "provincia",
+                "description": null,
+                "annotations": {
+                    "facet": true
+                },
+                "label": "PROVINCIA",
+                "type": "text"
+            }
+        ],
+        "metas": {
+            "default": {
+                "title": "L\u00edmites provinciales de Castilla y Le\u00f3n: recintos",
+                "description": "<p><span style=\"font-size: 12.495px;\">Representaci\u00f3n cartogr\u00e1fica de las unidades administrativas provinciales oficiales de Castilla y Le\u00f3n.</span></p><p><span style=\"font-size: 12.495px;\">Delimitaci\u00f3n administrativa de las provincias de Castilla y Le\u00f3n generada a partir de las l\u00edneas-l\u00edmite municipales oficiales del Instituto Geogr\u00e1fico Nacional (IGN).</span></p><p><span style=\"font-size: 12.495px;\">Constituye una de las cartograf\u00edas b\u00e1sicas de referencia de la Comunidad Aut\u00f3noma de Castilla y Le\u00f3n.</span></p>",
+                "theme": [
+                    "Medio ambiente"
+                ],
+                "keyword": [
+                    "Unidades administrativas",
+                    "l\u00edmites",
+                    "recintos",
+                    "provincias"
+                ],
+                "license": "CC BY 4.0 ES",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/deed.es_ES",
+                "language": "es",
+                "metadata_languages": [
+                    "es"
+                ],
+                "timezone": "Europe/Madrid",
+                "modified": "2022-04-18T11:18:34.836000+00:00",
+                "modified_updates_on_metadata_change": true,
+                "modified_updates_on_data_change": true,
+                "data_processed": "2020-11-03T12:10:38.380000+00:00",
+                "metadata_processed": "2022-04-18T11:18:48.660000+00:00",
+                "geographic_reference": [
+                    "es_40_07"
+                ],
+                "geographic_reference_auto": true,
+                "territory": [
+                    "Castilla y Le\u00f3n"
+                ],
+                "geometry_types": [
+                    "MultiPolygon",
+                    "Polygon"
+                ],
+                "publisher": "Junta de Castilla y Le\u00f3n",
+                "references": null,
+                "records_count": 9,
+                "attributions": null,
+                "source_domain": null,
+                "source_domain_title": null,
+                "source_domain_address": null,
+                "source_dataset": null,
+                "shared_catalog": null,
+                "federated": false,
+                "oauth_scope": null,
+                "parent_domain": null
+            },
+            "custom": {
+                "conjuntos-de-datos-relacionados": null
+            }
+        }
+    }
+}

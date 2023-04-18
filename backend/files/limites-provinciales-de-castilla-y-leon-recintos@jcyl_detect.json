@@ -1,0 +1,145 @@
+{
+    "nb_rows": 9,
+    "nb_columns": 4,
+    "nb_cells": 36,
+    "accuracy": {
+        "geo_point_2d": 100.0,
+        "geo_shape": 100.0,
+        "cod_ine_prov": 100.0,
+        "provincia": -1
+    },
+    "nb_incomplete_cells": 0,
+    "percentage_complete_cells": 100.0,
+    "nb_incomplete_rows": 0,
+    "percentage_complete_rows": 100.0,
+    "percentage_comprehensible_columns": 100.0,
+    "percentage_accurate_cells": 100.0,
+    "nbcol_accuracy": 3,
+    "cols_types": "geo_point_2d#latlon_wgs#1.5#1.0**geo_shape#geoshape#1.5#1.0**cod_ine_prov#int#1.0#1.0**provincia#string#1.0#**",
+    "return_dict": {
+        "encoding": "UTF-8",
+        "separator": ";",
+        "header_row_idx": 0,
+        "header": [
+            "geo_point_2d",
+            "geo_shape",
+            "cod_ine_prov",
+            "provincia"
+        ],
+        "total_lines": 9,
+        "heading_columns": 0,
+        "trailing_columns": 0,
+        "continuous": [],
+        "categorical": [],
+        "columns_fields": {
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.0
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.0
+                }
+            ],
+            "cod_ine_prov": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "provincia": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ]
+        },
+        "columns_labels": {
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.0
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.0
+                },
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 0.5
+                }
+            ],
+            "cod_ine_prov": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ],
+            "provincia": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ]
+        },
+        "columns": {
+            "geo_point_2d": [
+                {
+                    "python_type": "string",
+                    "format": "latlon_wgs",
+                    "score": 1.5
+                }
+            ],
+            "geo_shape": [
+                {
+                    "python_type": "string",
+                    "format": "geoshape",
+                    "score": 1.5
+                },
+                {
+                    "python_type": "string",
+                    "format": "json_geojson",
+                    "score": 1.5
+                }
+            ],
+            "cod_ine_prov": [
+                {
+                    "python_type": "int",
+                    "format": "int",
+                    "score": 1.0
+                }
+            ],
+            "provincia": [
+                {
+                    "python_type": "string",
+                    "format": "string",
+                    "score": 1.0
+                }
+            ]
+        }
+    }
+}

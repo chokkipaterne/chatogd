@@ -1,0 +1,60 @@
+<nav class="indigo darken-4" role="navigation">
+  <div class="nav-wrapper">
+    <a
+      id="logo-container"
+      href="#"
+      class="brand-logo"
+      [routerLink]="'/'"
+      routerLinkActive="active"
+    >
+      ChatOGD</a
+    >
+    <ul class="right hide-on-med-and-down">
+      <!--<li>
+        <a [routerLink]="'/about'" routerLinkActive="active">About</a>
+      </li>-->
+      <li>
+        <a [routerLink]="'/faq'" routerLinkActive="active">FAQ</a>
+      </li>
+      <li>
+        <a href="mailto:abiola-paterne.chokki@unamur.be?subject=ChatOGD"
+          >Contact</a
+        >
+      </li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li class="indigo darken-4 center">
+        <span class="white-text text-lighten-3 header-app">ChatOGD</span>
+      </li>
+      <li>
+        <a
+          (click)="closeSidenav()"
+          [routerLink]="'/'"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <!--<li>
+        <a
+          (click)="closeSidenav()"
+          [routerLink]="'/about'"
+          routerLinkActive="active"
+          >About</a
+        >
+      </li>-->
+      <li>
+        <a
+          (click)="closeSidenav()"
+          href="mailto:abiola-paterne.chokki@unamur.be?subject=ChatOGD"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    >
+  </div>
+</nav>
+<div class="spacer"></div>

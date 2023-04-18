@@ -1,0 +1,474 @@
+<div>
+  <div class="section">
+    <div class="row no-mb">
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="chat-list" #chatListContainer>
+            <ng-container *ngFor="let item of chatMessages">
+              <div
+                class="chat-item"
+                [ngClass]="{
+                  right: item?.user?.id == human.id,
+                  left: item?.user?.id != human.id
+                }"
+              >
+                <img id="avatar" [src]="item?.user?.profileImageUrl" />
+                <p id="message-body" [innerHTML]="item?.message"></p>
+              </div>
+            </ng-container>
+            <div class="load center" *ngIf="statusLoad">
+              <img src="../../../assets/loading.gif" />
+            </div>
+          </div>
+          <div class="chat-footer">
+            <input
+              matInput
+              placeholder="Type your answer and then enter"
+              id="chat-textarea"
+              [(ngModel)]="chatInputMessage"
+              [disabled]="statusLoad"
+              required
+              (keydown.enter)="send()"
+            />
+            <button
+              id="clear-button"
+              alt="Restart conversation"
+              (click)="clearMessage()"
+              [disabled]="statusLoad"
+            >
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l8">
+        <div class="card">
+          <div *ngIf="chosenDataset" class="rep">
+            <div class="buttons">
+              <button
+                [ngClass]="{
+                  'btn waves-effect waves-light indigo darken-1': dqBtn,
+                  'waves-effect waves-light btn-flat darken-1': !dqBtn
+                }"
+                (click)="switchBtn(true)"
+              >
+                Data Quality
+              </button>
+              &nbsp;&nbsp;
+              <button
+                [ngClass]="{
+                  'btn waves-effect waves-light indigo darken-1': !dqBtn,
+                  'waves-effect waves-light btn-flat darken-1': dqBtn
+                }"
+                (click)="switchBtn(false)"
+              >
+                User Preferences
+              </button>
+            </div>
+            <div *ngIf="dqBtn" #dqrep1>
+              <div class="row">
+                <div class="col s12 m12 l12 bdbot overqt">
+                  <h4 class="title center">{{ dataTitle }}</h4>
+                  <h5 class="title">Overall Quality</h5>
+                  <div class="divcenter">
+                    <div
+                      class="gaugemeter"
+                      id="GaugeMeter_oq"
+                      [attr.data-percent]="toInt(quality['overall'])"
+                      data-append="%"
+                      data-size="256"
+                      data-color="#2C94E0"
+                      data-back="#FF9EE0"
+                      data-width="30"
+                    ></div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l6 bdright subqt">
+                  <div *ngIf="graphMd">
+                    <h5 class="title">Overall Metadata Quality</h5>
+
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small tooltipped"
+                        data-position="top"
+                        data-tooltip="Help you to better understand the reasons behind the displayed quality value."
+                        (click)="moreDetailsMd()"
+                        >More Details</a
+                      ><br /><br />
+                      <div
+                        class="gaugemeter"
+                        id="GaugeMeter_mq"
+                        [attr.data-percent]="toInt(quality['metadata'])"
+                        data-append="%"
+                        data-size="256"
+                        data-color="#2C94E0"
+                        data-back="#FF9EE0"
+                        data-width="30"
+                      ></div>
+                    </div>
+                  </div>
+                  <div *ngIf="graphMdDimension">
+                    <h5 class="title">Dimensions Metadata Quality</h5>
+                    <p>
+                      <i class="notif">
+                        click on any dimension (bar) to get more details on the
+                        metrics (sub-dimensions) quality.</i
+                      >
+                    </p>
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small"
+                        (click)="backMd()"
+                        >Back</a
+                      ><br /><br />
+                    </div>
+                    <div class="bar-container">
+                      <div
+                        *ngFor="let dim of metadataDimensions"
+                        class="tooltipped"
+                        data-position="top"
+                        [attr.data-tooltip]="dim.description"
+                      >
+                        <h2 *ngIf="dim.weight > 0">
+                          {{ dim.name }} ({{ valueQt(dim.id) + "%" }})
+                        </h2>
+                        <div
+                          class="bar"
+                          *ngIf="dim.weight > 0"
+                          (click)="metricsMd(dim)"
+                        >
+                          <div
+                            class="bar-inner"
+                            [ngStyle]="{
+                              width: valueQt(dim.id) + '%'
+                            }"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="graphMdMetric">
+                    <h5 class="title">
+                      Metrics of {{ selectedMdDimension.name }} Quality
+                    </h5>
+
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small"
+                        (click)="backMdDimension()"
+                        >Back</a
+                      ><br /><br />
+                    </div>
+                    <div class="bar-container">
+                      <div
+                        *ngFor="let met of selectedMdDimension.metrics"
+                        class="tooltipped"
+                        data-position="top"
+                        [attr.data-tooltip]="met.description"
+                      >
+                        <h2 *ngIf="met.weight > 0">
+                          {{ met.name }} ({{ valueQt(met.id) + "%" }})
+                        </h2>
+                        <div class="bar" *ngIf="met.weight > 0">
+                          <div
+                            class="bar-inner"
+                            [ngStyle]="{
+                              width: valueQt(met.id) + '%'
+                            }"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l6 bdleft subqt">
+                  <div *ngIf="graphDt">
+                    <h5 class="title">Overall Data Quality</h5>
+
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small tooltipped"
+                        data-position="top"
+                        data-tooltip="Help you to better understand the reasons behind the displayed quality value."
+                        (click)="moreDetailsDt()"
+                        >More Details</a
+                      ><br /><br />
+                      <div
+                        class="gaugemeter"
+                        id="GaugeMeter_dq"
+                        [attr.data-percent]="toInt(quality['data'])"
+                        data-append="%"
+                        data-size="256"
+                        data-color="#2C94E0"
+                        data-back="#FF9EE0"
+                        data-width="30"
+                      ></div>
+                    </div>
+                  </div>
+                  <div *ngIf="graphDtDimension">
+                    <h5 class="title">Dimensions Data Quality</h5>
+                    <p>
+                      <i class="notif">
+                        click on any dimension (bar) to get more details on the
+                        metrics (sub-dimensions) quality.</i
+                      >
+                    </p>
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small"
+                        (click)="backDt()"
+                        >Back</a
+                      ><br /><br />
+                    </div>
+                    <div class="bar-container">
+                      <div
+                        *ngFor="let dim of dataDimensions"
+                        class="tooltipped"
+                        data-position="top"
+                        [attr.data-tooltip]="dim.description"
+                      >
+                        <h2 *ngIf="dim.weight > 0">
+                          {{ dim.name }} ({{ valueQt(dim.id) + "%" }})
+                        </h2>
+                        <div
+                          class="bar"
+                          *ngIf="dim.weight > 0"
+                          (click)="metricsDt(dim)"
+                        >
+                          <div
+                            class="bar-inner"
+                            [ngStyle]="{
+                              width: valueQt(dim.id) + '%'
+                            }"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="graphDtMetric">
+                    <h5 class="title">
+                      Metrics of {{ selectedDtDimension.name }} Quality
+                    </h5>
+
+                    <div class="divcenter">
+                      <a
+                        class="waves-effect waves-light btn-small"
+                        (click)="backDtDimension()"
+                        >Back</a
+                      ><br /><br />
+                    </div>
+                    <div class="bar-container">
+                      <div
+                        *ngFor="let met of selectedDtDimension.metrics"
+                        class="tooltipped"
+                        data-position="top"
+                        [attr.data-tooltip]="met.description"
+                      >
+                        <h2 *ngIf="met.weight > 0">
+                          {{ met.name }} ({{ valueQt(met.id) + "%" }})
+                        </h2>
+                        <div class="bar" *ngIf="met.weight > 0">
+                          <div
+                            class="bar-inner"
+                            [ngStyle]="{
+                              width: valueQt(met.id) + '%'
+                            }"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="!dqBtn" #dqrep2>
+              <h5 class="title">
+                Columns to take into account in the quality assessment &nbsp;
+                &nbsp;<button
+                  class="waves-effect waves-light btn-flat darken-1 textred"
+                  (click)="selectAll()"
+                >
+                  Select All</button
+                >&nbsp; &nbsp;<button
+                  class="waves-effect waves-light btn-flat darken-1 textred"
+                  (click)="deselectAll()"
+                >
+                  Deselect All
+                </button>
+              </h5>
+              <div class="row">
+                <div class="col s6 m6 l4" *ngFor="let col of columns">
+                  <label>
+                    <input
+                      type="checkbox"
+                      [(ngModel)]="col.checked"
+                      [ngModelOptions]="{ standalone: true }"
+                      (change)="handleChkState(col)"
+                    />
+                    <span>{{ col.label ? col.label : col.name }}</span>
+                  </label>
+                </div>
+              </div>
+
+              <h5 class="title">
+                Weights of the dimensions and metrics to take into account in
+                the quality assessment
+              </h5>
+              <span class="helper-text"
+                >Set weight to 0 if the dimension or metric is
+                unimportant.</span
+              >
+              <div class="row">
+                <div class="col s12 m6 l6 bdright subqt">
+                  <h5 class="title">
+                    Metadata Quality &nbsp; &nbsp;<button
+                      class="waves-effect waves-light btn-flat darken-1 textred"
+                      (click)="resetMd()"
+                    >
+                      Reset</button
+                    >&nbsp; &nbsp;<button
+                      class="waves-effect waves-light btn-flat darken-1 textred"
+                      (click)="zeroMd()"
+                    >
+                      Set All to Zero
+                    </button>
+                  </h5>
+                  <ul class="collapsible">
+                    <li *ngFor="let dim of metadataDimensions">
+                      <div class="collapsible-header">
+                        <i class="material-icons">filter_drama</i>{{ dim.name }}
+                      </div>
+                      <div class="collapsible-body">
+                        <div class="col s12 no-mb">
+                          <b class="metric">{{ dim.name }}</b>
+                          <div class="input-field inline">
+                            <input
+                              required
+                              id="{{ dim.id }}"
+                              placeholder="{{ dim.name }}"
+                              value="{{ dim.weight }}"
+                              type="number"
+                              [(ngModel)]="dim.weight"
+                              [ngModelOptions]="{ standalone: true }"
+                              (keyup)="updateMetadataMetrics(dim)"
+                              class="browser-default tooltipped"
+                              data-position="top"
+                              [attr.data-tooltip]="dim.description"
+                            />
+                            <!--<span class="helper-text">{{ dim.description }}</span>-->
+                          </div>
+                        </div>
+                        <div class="col s12 bg-mb">
+                          <i>Metrics of the dimension: {{ dim.name }}</i>
+                        </div>
+                        <div
+                          class="input-field col s6 m6 l6 sm-mb"
+                          *ngFor="let met of dim.metrics"
+                        >
+                          <input
+                            id="{{ met.id }}"
+                            required
+                            placeholder="{{ met.name }}"
+                            value="{{ met.weight }}"
+                            type="number"
+                            [(ngModel)]="met.weight"
+                            [ngModelOptions]="{ standalone: true }"
+                            class="browser-default tooltipped"
+                            data-position="top"
+                            [attr.data-tooltip]="met.description"
+                          />
+                          <label for="{{ met.id }}" class="active">{{
+                            met.name
+                          }}</label>
+                          <!--<span class="helper-text">{{ met.description }}</span>-->
+                        </div>
+                        <div style="clear: both"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col s12 m6 l6 bdleft subqt">
+                  <h5 class="title">
+                    Data Quality &nbsp; &nbsp;<button
+                      class="waves-effect waves-light btn-flat darken-1 textred"
+                      (click)="resetDq()"
+                    >
+                      Reset</button
+                    >&nbsp; &nbsp;<button
+                      class="waves-effect waves-light btn-flat darken-1 textred"
+                      (click)="zeroDq()"
+                    >
+                      Set All to Zero
+                    </button>
+                  </h5>
+                  <ul class="collapsible">
+                    <li *ngFor="let dim of dataDimensions">
+                      <div class="collapsible-header">
+                        <i class="material-icons">filter_drama</i>{{ dim.name }}
+                      </div>
+                      <div class="collapsible-body">
+                        <div class="col s12 no-mb">
+                          <b class="metric">{{ dim.name }}</b>
+                          <div class="input-field inline">
+                            <input
+                              id="{{ dim.id }}"
+                              required
+                              placeholder="{{ dim.name }}"
+                              value="{{ dim.weight }}"
+                              type="number"
+                              [(ngModel)]="dim.weight"
+                              [ngModelOptions]="{ standalone: true }"
+                              (keyup)="updateDataMetrics(dim)"
+                              class="browser-default tooltipped"
+                              data-position="top"
+                              [attr.data-tooltip]="dim.description"
+                            />
+                            <!--<span class="helper-text">{{ dim.description }}</span>-->
+                          </div>
+                        </div>
+                        <div class="col s12 bg-mb">
+                          <i>Metrics of the dimension: {{ dim.name }}</i>
+                        </div>
+                        <div
+                          class="input-field col s6 m6 l6 sm-mb"
+                          *ngFor="let met of dim.metrics"
+                        >
+                          <input
+                            id="{{ met.id }}"
+                            required
+                            placeholder="{{ met.name }}"
+                            value="{{ met.weight }}"
+                            type="number"
+                            [(ngModel)]="met.weight"
+                            [ngModelOptions]="{ standalone: true }"
+                            class="browser-default tooltipped"
+                            data-position="top"
+                            [attr.data-tooltip]="met.description"
+                          />
+                          <label for="{{ met.id }}" class="active">{{
+                            met.name
+                          }}</label>
+                          <!--<span class="helper-text">{{ met.description }}</span>-->
+                        </div>
+                        <div style="clear: both"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="!chosenDataset" class="nodataset">
+            <div class="load" *ngIf="statusLoad">
+              <img src="../../../assets/waiting_1.gif" />
+              <h5 class="title">Please wait while we process your data</h5>
+            </div>
+            <div *ngIf="!statusLoad">
+              <h5 class="title">Please select the dataset to be evaluated</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
