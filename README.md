@@ -1,6 +1,6 @@
 # ChatOGD
 
-ChatOGD, a chatbot for Open Government Data Quality Assessment.
+ChatOGD, a conventional agent for Open Government Data Quality Assessment.
 
 ## Conversation flow & Screenshot of ChatOGD
 
