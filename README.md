@@ -2,6 +2,10 @@
 
 ChatOGD, a conventional agent for Open Government Data Quality Assessment.
 
+## Dimensions & Metrics used in ChatOGD
+
+See in ![Dimensions_Metrics](/Dimensions_Metrics_Data_Quality.pdf).
+
 ## Conversation flow & Screenshot of ChatOGD
 
 ![Flow_Screenshot](/home.png)
