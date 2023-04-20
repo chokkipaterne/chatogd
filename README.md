@@ -1,17 +1,17 @@
-# OpenGovDataCheck
+# QualityOGD
 
-OpenGovDataCheck, a conventional agent for Open Government Data Quality Assessment.
+QualityOGD, a conventional agent for Open Government Data Quality Assessment.
 
-## Dimensions & Metrics used in OpenGovDataCheck
+## Dimensions & Metrics used in QualityOGD
 
 See in ![Dimensions_Metrics](/Dimensions_Metrics_Data_Quality.pdf).
 
-## Conversation flow & Screenshot of OpenGovDataCheck
+## Conversation flow & Screenshot of QualityOGD
 
 ![Flow_Screenshot](/home.png)
-Conversation flow of OpenGovDataCheck (parallelogram boxes for chatbot outputs and rectangle boxes for user inputs) (Left). Screenshot of OpenGovDataCheck interface (Right).
+Conversation flow of QualityOGD (parallelogram boxes for chatbot outputs and rectangle boxes for user inputs) (Left). Screenshot of QualityOGD interface (Right).
 
-## Demo Video of OpenGovDataCheck
+## Demo Video of QualityOGD
 
 A demonstration video is accessible at https://rb.gy/89yfpr.
 
